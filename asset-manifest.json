@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gerencia/static/css/main.8b43a585.css",
+    "main.js": "/gerencia/static/js/main.2e0d039e.js",
+    "index.html": "/gerencia/index.html",
+    "main.8b43a585.css.map": "/gerencia/static/css/main.8b43a585.css.map",
+    "main.2e0d039e.js.map": "/gerencia/static/js/main.2e0d039e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b43a585.css",
+    "static/js/main.2e0d039e.js"
+  ]
+}
