@@ -12,7 +12,7 @@ function App() {
   const [linksData, setLinksData] = useState({}); // Armazena os dados dos links
 
   return (
-    <Router basename={process.env.PUBLIC_URL}> {/* basename dinâmico para GitHub Pages */}
+    <Router basename="/GerenciaAdmin">
       <div className="app">
         <CompanySelector setCurrentCompany={setCurrentCompany} />
 
