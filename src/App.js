@@ -12,7 +12,7 @@ function App() {
   const [linksData, setLinksData] = useState({}); // Armazena os dados dos links
 
   return (
-    <Router basename="/GerenciaAdmin">
+    <Router basename="/gerencia">
       <div className="app">
         <CompanySelector setCurrentCompany={setCurrentCompany} />
 
