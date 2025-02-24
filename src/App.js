@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Switch, Link } from "react-router-dom";
 import CompanySelector from "./components/CompanySelector";
 import LinkForm from "./components/LinkForm";
 import DeletePage from "./components/DeletePage";
@@ -12,7 +12,7 @@ function App() {
   const [linksData, setLinksData] = useState({}); // Armazena os dados dos links
 
   return (
-    <Router basename="/gerencia">
+    <Router> {/* Agora usando HashRouter para evitar erro 404 */}
       <div className="app">
         <CompanySelector setCurrentCompany={setCurrentCompany} />
 
@@ -24,10 +24,10 @@ function App() {
         </nav>
 
         <Switch>
-          <Route exact path="/" component={() => <LinkForm currentCompany={currentCompany} setLinksData={setLinksData} />} />
-          <Route path="/delete" component={() => <DeletePage currentCompany={currentCompany} />} />
-          <Route path="/edit-sections" component={() => <EditSection currentCompany={currentCompany} />} />
-          <Route path="/edit-shortcuts" component={() => <EditShortcut currentCompany={currentCompany} />} />
+          <Route exact path="/" render={() => <LinkForm currentCompany={currentCompany} setLinksData={setLinksData} />} />
+          <Route path="/delete" render={() => <DeletePage currentCompany={currentCompany} />} />
+          <Route path="/edit-sections" render={() => <EditSection currentCompany={currentCompany} />} />
+          <Route path="/edit-shortcuts" render={() => <EditShortcut currentCompany={currentCompany} />} />
         </Switch>
       </div>
     </Router>
